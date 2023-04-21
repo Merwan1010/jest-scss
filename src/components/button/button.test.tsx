@@ -48,6 +48,11 @@ describe('Button', () => {
         const { getByRole } = render(<Button text="Click me" fill={false} />);
         const buttonElement = getByRole('button');
         expect(buttonElement).not.toHaveClass('fill');
+
+        const buttonStyle = window.getComputedStyle(buttonElement);
+        console.log(buttonStyle);
+        const backgroundColor = buttonStyle.getPropertyValue('background-color');
+        expect(backgroundColor).toBe('white');
     });
 
 });
