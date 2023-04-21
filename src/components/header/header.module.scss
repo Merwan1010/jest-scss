@@ -1,0 +1,16 @@
+.wrapper {
+    width: 100vw;
+    height: 50px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.textWrapper {
+    background-color: white;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 18px;
+    position: fixed;
+    height: inherit;
+    width: inherit;
+}

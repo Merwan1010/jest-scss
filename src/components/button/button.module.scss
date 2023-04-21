@@ -1,0 +1,70 @@
+@import '@/styles/colors.scss';
+
+.wrapper {
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    line-height: normal;
+    overflow: visible;
+    text-align: left;
+    text-transform: none;
+    width: fit-content;
+    min-width: 138px;
+    min-height: 48px;
+    position: relative;
+    user-select: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.25s ease, transform 0.3s ease;
+
+    &.fill {
+        background-color: $grey;
+        color: white;
+    }
+
+    &:not(.fill) {
+        background-color: white;
+        color: black;
+    }
+
+
+    &.outline {
+        border: 1.5px solid black;
+    }
+
+    &.underline {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    &.disabled {
+        opacity: 0.45;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+
+    &:hover:not(.disabled) {
+        &.fill {
+            background-color: adjust-color($grey, $lightness: -10%);
+        }
+
+        transform: scale(1.01);
+    }
+
+    &:active {
+        &:not(.disabled) {
+            &.fill {
+                background-color: $grey;
+            }
+
+            transform: scale(0.97);
+            transition-duration: 0.1s;
+        }
+    }
+}

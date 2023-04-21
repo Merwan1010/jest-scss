@@ -1,0 +1,24 @@
+.wrapper {
+    min-width: 120px;
+    height: 100%;
+}
+
+.sideMenu {
+    min-width: inherit;
+    height: inherit;
+    position: fixed;
+    background-color: white;
+    padding: 10px 0 0 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    border-right: 1px solid black;
+}
+
+.sideMenu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sideMenu nav ul li {
+    margin-bottom: 10px;
+}
